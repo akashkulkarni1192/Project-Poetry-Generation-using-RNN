@@ -15,9 +15,9 @@ Since the number of words in the vocabulary is huge, I converted the word vector
 Implemention
 ------------
 I implemented this in two ways
-* **Simple Recurrent Unit :**  In this model, I used 1 Word embedding layer of size 30 followed by 1 hidden RNN layer of size 30. Once the model is trained, I created an initial word distribution table (which stores the probability of the all the initial word starting the sentence). The model then picks a random initial word using this table to generate a line of poetry. There were two limitations of this model
+* **Simple Recurrent Unit :**  In this model, I used 1 Word embedding layer of size 30 followed by 1 hidden RNN layer of size 30. Once the model is trained, I created an initial word distribution table (which stores the probability of the all the initial word starting the sentence). The model then picks a random initial word using this table to generate a line of poetry. There were **two limitations** of this model
   * Sentences that were generated are very short, because there are many words whose immediate next word is END i.e the END token was over-represented.
   * Same sentences were generated most of the times, since the probability of the initial words(of any sentence) in the distribution is much higher than other non-initial words
-* **Rated Recurrent Unit:** In this model, I used a rated recurrent unit with a rate matrix insted of simple recurrent unit. The two limitations were solved in the following ways:
+* **Rated Recurrent Unit:** In this model, I used a rated recurrent unit with a rate matrix insted of simple recurrent unit. The **two limitations were solved** in the following ways:
   * While generating the lines, the END token was added only 10% of the times. This decreased the probability of occurence of END token increasing the length of the sentences.
   * Instead of using initial word distribution table, I used the output probability of the softmax function at the output layer as the distribution. This increased the variety of the sentences being generated.
