@@ -1,6 +1,7 @@
 Project-Poetry-Generation-using-Rated-Recurrent-Unit
 ====================================================
 Using RNN, created a language model with word embedding and later improved it using a Rated Recurrent Unit
+
 Goal
 ----
 Aim of the project is to build a language model using RNN (Recurrent Neural Network) and word embedding. This model will be trained on poems written by Robert Frost. Later, this model will be used to generate lines of poem in the style similar to Robert Frost's.
