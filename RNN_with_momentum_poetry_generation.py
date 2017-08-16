@@ -167,5 +167,5 @@ def generate_poetry():
 
 
 if __name__ == '__main__':
-    # train_poetry_model()
+    train_poetry_model()
     generate_poetry()
